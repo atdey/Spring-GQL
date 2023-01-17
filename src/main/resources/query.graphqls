@@ -1,0 +1,20 @@
+type Query {
+    helloWorld : String,
+    fullName(firstName : String, lastName : String) : String,
+    userById(id : Long) : UserDetailsDTO,
+    userList : [UserDetailsDTO]
+}
+
+type UserDetailsDTO {
+    id : Long
+    userName : String!
+    address : String
+    phone : String
+    subjects : [SubjectsDTO]
+}
+
+type SubjectsDTO {
+    id : Long
+    subjectName : String
+    stream : String
+}
