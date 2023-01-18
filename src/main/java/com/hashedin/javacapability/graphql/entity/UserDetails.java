@@ -1,6 +1,5 @@
 package com.hashedin.javacapability.graphql.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -29,7 +28,7 @@ public class UserDetails {
     @Column(name = "phone")
     private String phone;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "user_details_id")
-    private Set<Subjects> subjects;
+    private Set<Course> courses;
 }

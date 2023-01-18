@@ -1,15 +1,17 @@
 type Mutation {
-    createUser(userDetailsRequest : UserDetailsRequest) : UserDetailsDTO
+    createUser(userDetailsRequest : UserDetailsRequest) : UserDetailsResponse
+    updateUser(id : Long, userDetailsRequest : UserDetailsRequest) : UserDetailsResponse
+    deleteUser(id : Long) :  String
 }
 
 input UserDetailsRequest {
     userName : String!
     address : String
     phone : String
-    subjects : [SubjectsRequest]
+    courses : [CourseRequest]
 }
 
-input SubjectsRequest {
-    subjectName : String
-    stream : String
+input CourseRequest {
+    courseName : String
+    category : String
 }

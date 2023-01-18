@@ -7,10 +7,10 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-public class SubjectsDTO {
+public class CourseResponse {
 
     private Long id;
-    private String subjectName;
-    private String stream;
+    private String courseName;
+    private String category;
     private Long userDetailsId;
 }

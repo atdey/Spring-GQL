@@ -1,20 +1,22 @@
 package com.hashedin.javacapability.graphql.service;
 
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsDTO;
+import com.hashedin.javacapability.graphql.model.dto.UserDetailsResponse;
 import com.hashedin.javacapability.graphql.model.dto.UserDetailsRequest;
 
 import java.util.List;
 
 public interface UserDetailsService {
 
-    UserDetailsDTO addUser(UserDetailsDTO userDetailsDTO);
+    UserDetailsResponse addUser(UserDetailsRequest userDetailsDTORequest);
 
-    UserDetailsDTO addUser(UserDetailsRequest userDetailsDTORequest);
+    UserDetailsResponse updateUser(Long id, UserDetailsRequest userDetailsDTORequest);
 
-    UserDetailsDTO getUser(Long id);
+    void deleteUser(Long id);
 
-    UserDetailsDTO getUser(String userName);
+    UserDetailsResponse getUser(Long id);
 
-    List<UserDetailsDTO> getAllUsers();
+    UserDetailsResponse getUser(String userName);
+
+    List<UserDetailsResponse> getAllUsers();
 
 }

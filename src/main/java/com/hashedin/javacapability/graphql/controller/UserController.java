@@ -1,6 +1,7 @@
 package com.hashedin.javacapability.graphql.controller;
 
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsDTO;
+import com.hashedin.javacapability.graphql.model.dto.UserDetailsRequest;
+import com.hashedin.javacapability.graphql.model.dto.UserDetailsResponse;
 import com.hashedin.javacapability.graphql.service.UserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,23 +17,23 @@ public class UserController {
     private UserDetailsService userDetailsService;
 
     @PostMapping("/user")
-    public ResponseEntity<String> addUser(@RequestBody UserDetailsDTO userDetailsDTO) {
-        userDetailsService.addUser(userDetailsDTO);
+    public ResponseEntity<String> addUser(@RequestBody UserDetailsRequest userDetailsRequest) {
+        userDetailsService.addUser(userDetailsRequest);
         return ResponseEntity.ok("Data inserted");
     }
 
     @GetMapping("/user/id/{id}")
-    public ResponseEntity<UserDetailsDTO> getUserById(@PathVariable Long id) {
+    public ResponseEntity<UserDetailsResponse> getUserById(@PathVariable Long id) {
         return ResponseEntity.ok(userDetailsService.getUser(id));
     }
 
     @GetMapping("/user/username/{name}")
-    public ResponseEntity<UserDetailsDTO> getUserByName(@PathVariable String name) {
+    public ResponseEntity<UserDetailsResponse> getUserByName(@PathVariable String name) {
         return ResponseEntity.ok(userDetailsService.getUser(name));
     }
 
     @GetMapping("/users")
-    public ResponseEntity<List<UserDetailsDTO>> getAllUsers() {
+    public ResponseEntity<List<UserDetailsResponse>> getAllUsers() {
         return ResponseEntity.ok(userDetailsService.getAllUsers());
     }
 }

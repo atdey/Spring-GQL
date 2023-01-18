@@ -3,10 +3,10 @@ package com.hashedin.javacapability.graphql.model.dto;
 import lombok.Data;
 
 @Data
-public class SubjectsRequest {
+public class CourseRequest {
 
     private Long id;
-    private String subjectName;
-    private String stream;
+    private String courseName;
+    private String category;
     private Long userDetailsId;
 }

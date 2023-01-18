@@ -1,20 +1,20 @@
 type Query {
     helloWorld : String,
     fullName(firstName : String, lastName : String) : String,
-    userById(id : Long) : UserDetailsDTO,
-    userList : [UserDetailsDTO]
+    userById(id : Long) : UserDetailsResponse,
+    userList : [UserDetailsResponse]
 }
 
-type UserDetailsDTO {
+type UserDetailsResponse {
     id : Long
     userName : String!
     address : String
     phone : String
-    subjects : [SubjectsDTO]
+    courses : [CourseResponse]
 }
 
-type SubjectsDTO {
+type CourseResponse {
     id : Long
-    subjectName : String
-    stream : String
+    courseName : String
+    category : String
 }

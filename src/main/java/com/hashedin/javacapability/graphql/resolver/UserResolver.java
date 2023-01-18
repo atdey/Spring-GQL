@@ -1,9 +1,9 @@
 package com.hashedin.javacapability.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLResolver;
-import com.hashedin.javacapability.graphql.entity.Subjects;
-import com.hashedin.javacapability.graphql.model.dto.SubjectsDTO;
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsDTO;
+import com.hashedin.javacapability.graphql.entity.Course;
+import com.hashedin.javacapability.graphql.model.dto.CourseResponse;
+import com.hashedin.javacapability.graphql.model.dto.UserDetailsResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,18 +13,18 @@ import java.util.*;
 
 @Service
 @Slf4j
-public class UserResolver implements GraphQLResolver<UserDetailsDTO> {
+public class UserResolver implements GraphQLResolver<UserDetailsResponse> {
 
     @Autowired
     private ModelMapper modelMapper;
 
-    public Set<SubjectsDTO> getSubjects(UserDetailsDTO userDetailsDTO) {
-        Set<SubjectsDTO> subjectsDTOS = new HashSet<>();
-        if (userDetailsDTO.getUserDetails().getSubjects() != null) {
-            for (Subjects subjects : userDetailsDTO.getUserDetails().getSubjects()) {
-                subjectsDTOS.add(modelMapper.map(subjects, SubjectsDTO.class));
+    public Set<CourseResponse> getCourses(UserDetailsResponse userDetailsResponse) {
+        Set<CourseResponse> courseResponses = new HashSet<>();
+        if (userDetailsResponse.getUserDetails().getCourses() != null) {
+            for (Course course : userDetailsResponse.getUserDetails().getCourses()) {
+                courseResponses.add(modelMapper.map(course, CourseResponse.class));
             }
         }
-        return subjectsDTOS;
+        return courseResponses;
     }
 }

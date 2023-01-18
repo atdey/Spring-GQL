@@ -1,6 +1,5 @@
 package com.hashedin.javacapability.graphql.model.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.util.Set;
@@ -11,5 +10,5 @@ public class UserDetailsRequest {
     private String userName;
     private String address;
     private String phone;
-    private Set<SubjectsRequest> subjects;
+    private Set<CourseRequest> courses;
 }
