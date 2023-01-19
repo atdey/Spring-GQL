@@ -1,7 +1,7 @@
 package com.hashedin.javacapability.graphql.service;
 
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsResponse;
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsRequest;
+import com.hashedin.javacapability.graphql.model.response.UserDetailsResponse;
+import com.hashedin.javacapability.graphql.model.request.UserDetailsRequest;
 
 import java.util.List;
 

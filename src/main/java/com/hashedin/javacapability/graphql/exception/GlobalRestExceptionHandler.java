@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-public class ErrorAdvice {
+public class GlobalRestExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public final ResponseEntity<String> handleException(RuntimeException exception) {

@@ -10,11 +10,19 @@ type UserDetailsResponse {
     userName : String!
     address : String
     phone : String
-    courses : [CourseResponse]
+    courses(courseFilter : CourseFilter) : [CourseResponse]
 }
 
 type CourseResponse {
     id : Long
     courseName : String
     category : String
+}
+
+enum CourseFilter {
+    JAVA,
+    PYTHON,
+    JS,
+    MYSQL,
+    NOSQL
 }

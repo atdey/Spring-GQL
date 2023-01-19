@@ -1,4 +1,4 @@
-package com.hashedin.javacapability.graphql.model.dto;
+package com.hashedin.javacapability.graphql.model.request;
 
 import lombok.Data;
 

@@ -1,8 +1,8 @@
 package com.hashedin.javacapability.graphql.service;
 
 import com.hashedin.javacapability.graphql.entity.UserDetails;
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsResponse;
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsRequest;
+import com.hashedin.javacapability.graphql.model.response.UserDetailsResponse;
+import com.hashedin.javacapability.graphql.model.request.UserDetailsRequest;
 import com.hashedin.javacapability.graphql.repository.UserDetailsRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

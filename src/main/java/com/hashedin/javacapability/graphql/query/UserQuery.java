@@ -1,7 +1,7 @@
 package com.hashedin.javacapability.graphql.query;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.hashedin.javacapability.graphql.model.dto.UserDetailsResponse;
+import com.hashedin.javacapability.graphql.model.response.UserDetailsResponse;
 import com.hashedin.javacapability.graphql.service.UserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

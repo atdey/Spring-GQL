@@ -1,4 +1,4 @@
-package com.hashedin.javacapability.graphql.model.dto;
+package com.hashedin.javacapability.graphql.model.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.hashedin.javacapability.graphql.entity.UserDetails;

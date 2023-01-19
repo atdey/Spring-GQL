@@ -1,9 +1,9 @@
-package com.hashedin.javacapability.graphql.model.dto;
+package com.hashedin.javacapability.graphql.model.response;
 
 import lombok.Data;
 
 @Data
-public class CourseRequest {
+public class CourseResponse {
 
     private Long id;
     private String courseName;
